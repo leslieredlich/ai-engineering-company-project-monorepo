@@ -20,7 +20,7 @@ Se demoran 48 horas en resolver cuando se comprometieron a 24, y los agentes tra
 
 El **pipeline de selección asistido por IA, con scoring y ranking automático de CVs**, conectado al **agente de comunicación que les hace el seguimiento a los candidatos**. Es el reto de Operaciones de Selección y con él ataco al mismo tiempo los tres problemas que cuenta el briefing: la lectura de CVs a mano, los emails uno por uno y los clientes que llaman para preguntar cómo va su proceso.
 
-## Mi idea de Agente de IA (My AI Agent Idea)
+## My AI Agent Idea / Mi idea de Agente de IA
 
 Quiero construir un **agente de preselección que converse con el postulante** desde que postula hasta que el consultor toma la decisión.
 
