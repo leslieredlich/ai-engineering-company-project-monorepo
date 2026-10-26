@@ -10,7 +10,7 @@ Elegí Nexova porque es la empresa donde la IA está metida en el centro del neg
 
 ### 1. Operaciones de Selección (Javier Almeida, 40 consultores)
 
-Es lo que más plata le deja a Nexova y hoy todo se hace a mano: el cribado de CVs, la comunicación con los candidatos y el matching, que depende solo del ojo del consultor. Me interesa porque cada hora que la IA le ahorra a un consultor son más procesos cerrados, y porque el cliente hoy no tiene cómo ver en qué etapa va su búsqueda sin llamar.
+Es lo que más plata le deja a Nexova y hoy todo se hace a mano: el filtro de CVs, la comunicación con los candidatos y el matching, que depende solo del ojo del consultor. Me interesa porque cada hora que la IA le ahorra a un consultor son más procesos cerrados, y porque el cliente hoy no tiene cómo ver en qué etapa va su búsqueda sin llamar.
 
 ### 2. Atención al Cliente externalizado (Roberto Díaz, 30 agentes)
 

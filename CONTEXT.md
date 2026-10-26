@@ -143,7 +143,7 @@ Detalle de la elección en [`company-choice.md`](./company-choice.md).
 | Término | Significado en este proyecto |
 |---|---|
 | ATS | Sistema de seguimiento de candidatos (el interno de Nexova) |
-| Cribado | Primera revisión de CVs para descartar o preseleccionar |
+| Filtro de CVs | Primera revisión de CVs para descartar o preseleccionar |
 | Matching | Encaje entre un candidato y una vacante |
 | Scoring | Puntaje 0–100 de un candidato frente a una vacante, siempre con explicación |
 | RAG | Búsqueda en documentos o bases propias para que la IA responda con datos reales |
