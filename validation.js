@@ -207,8 +207,7 @@
     const parrafo = document.getElementById(`${nombre}-error`);
     controles(nombre).forEach((c) => c.setAttribute('aria-invalid', mensaje ? 'true' : 'false'));
     if (!parrafo) return;
-    parrafo.textContent = mensaje;
-    parrafo.classList.toggle('hidden', !mensaje);
+    parrafo.textContent = mensaje; // vacío = sin altura (clase empty:mt-0); aria-live lo anuncia
   }
 
   function validarCampo(nombre) {
@@ -332,9 +331,13 @@
     evento.preventDefault();
     exito.classList.add('hidden');
 
+    // Al enviar, silenciamos los avisos por campo: el resumen (role="alert") ya los lee todos juntos.
+    const regionesVivas = formulario.querySelectorAll('[aria-live]');
+    regionesVivas.forEach((r) => r.setAttribute('aria-live', 'off'));
     const errores = Object.keys(REGLAS)
       .map((nombre) => ({ nombre, mensaje: validarCampo(nombre) }))
       .filter((e) => e.mensaje);
+    setTimeout(() => regionesVivas.forEach((r) => r.setAttribute('aria-live', 'polite')), 500);
 
     if (errores.length) {
       mostrarResumen(errores);

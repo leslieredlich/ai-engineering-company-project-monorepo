@@ -86,9 +86,9 @@
       </ol>
     </nav>
 
-    <div class="mt-6 grid gap-10 lg:grid-cols-[18rem_1fr] lg:gap-12">
+    <div class="mt-6 grid gap-10 lg:grid-cols-12 lg:gap-12">
       <!-- Información de apoyo -->
-      <aside aria-labelledby="titulo-antes" class="lg:sticky lg:top-24 lg:self-start">
+      <aside aria-labelledby="titulo-antes" class="lg:col-span-4 lg:sticky lg:top-24 lg:self-start">
         <h1 class="font-display text-4xl font-extrabold leading-tight tracking-tight sm:text-5xl lg:text-4xl">Postula a un proceso</h1>
         <p class="mt-4 text-lg leading-relaxed text-grafito">Un consultor revisa tu perfil y te escribe cuando encaje con una vacante.</p>
 
@@ -105,7 +105,7 @@
       </aside>
 
       <!-- Formulario -->
-      <div>
+      <div class="lg:col-span-8">
         <div id="resumen-errores" class="mb-6 scroll-mt-24 hidden rounded-2xl border-2 border-alerta bg-alerta-50 p-6" role="alert" tabindex="-1" aria-labelledby="titulo-resumen-errores">
           <h2 id="titulo-resumen-errores" class="font-display text-lg font-semibold text-alerta">Revisa estos campos antes de enviar</h2>
           <ul id="lista-errores" class="mt-3 list-disc space-y-1 pl-5 text-alerta"></ul>
@@ -127,42 +127,42 @@
               <div class="sm:col-span-2">
                 <label for="nombre" class="font-semibold">Nombre y apellidos <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="nombre" name="nombre" type="text" autocomplete="name" required maxlength="80" aria-describedby="nombre-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
-                <p id="nombre-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                <p id="nombre-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="email" class="font-semibold">Email <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" aria-describedby="email-ayuda email-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="email-ayuda" class="mt-2 text-sm text-grafito">Aquí te avisaremos de cada etapa.</p>
-                <p id="email-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="email-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="pais" class="font-semibold">País de residencia <span class="text-alerta" aria-hidden="true">*</span></label>
                 <select id="pais" name="pais" required aria-describedby="pais-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                   <option value="">Elige un país</option>
                   <option value="ES">España</option>
                   <option value="US">Estados Unidos</option>
                 </select>
-                <p id="pais-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                <p id="pais-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="telefono" class="font-semibold">Teléfono <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="telefono" name="telefono" type="tel" autocomplete="tel" inputmode="tel" required maxlength="20" aria-describedby="telefono-ayuda telefono-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="telefono-ayuda" class="mt-2 text-sm text-grafito">Ejemplo: +34 612 345 678 o +1 305 555 0123.</p>
-                <p id="telefono-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="telefono-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="ciudad" class="font-semibold">Ciudad <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="ciudad" name="ciudad" type="text" autocomplete="address-level2" required maxlength="60" aria-describedby="ciudad-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
-                <p id="ciudad-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                <p id="ciudad-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
             </div>
           </fieldset>
@@ -174,60 +174,60 @@
               <div class="sm:col-span-2">
                 <label for="cargo_actual" class="font-semibold">Cargo actual o último cargo <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="cargo_actual" name="cargo_actual" type="text" autocomplete="organization-title" required maxlength="100" aria-describedby="cargo_actual-ayuda cargo_actual-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="cargo_actual-ayuda" class="mt-2 text-sm text-grafito">Ejemplo: Jefa de Ventas B2B.</p>
-                <p id="cargo_actual-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="cargo_actual-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="sector" class="font-semibold">Sector en el que trabajas <span class="text-alerta" aria-hidden="true">*</span></label>
                 <select id="sector" name="sector" required aria-describedby="sector-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                   <option value="">Elige un sector</option>
                   <option value="tecnologia">Tecnología</option>
                   <option value="retail">Retail</option>
                   <option value="servicios_financieros">Servicios financieros</option>
                   <option value="otro">Otro</option>
                 </select>
-                <p id="sector-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                <p id="sector-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="anios_experiencia" class="font-semibold">Años de experiencia <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="anios_experiencia" name="anios_experiencia" type="number" inputmode="numeric" min="0" max="50" step="1" required aria-describedby="anios_experiencia-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
-                <p id="anios_experiencia-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                <p id="anios_experiencia-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <fieldset class="sm:col-span-2" aria-describedby="nivel-error">
                 <legend class="font-semibold">Nivel de cargo al que postulas <span class="text-alerta" aria-hidden="true">*</span></legend>
                 <div class="mt-3 grid gap-3 sm:grid-cols-2">
-                  <label for="nivel_mando_medio" class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-[#7F91A3] p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input id="nivel_mando_medio" type="radio" name="nivel" value="mando_medio" required class="mt-1 h-5 w-5 accent-[#1F6F8B]" aria-describedby="nivel-error">
+                  <label for="nivel_mando_medio" class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-borde p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="nivel_mando_medio" type="radio" name="nivel" value="mando_medio" required class="mt-1 h-5 w-5 accent-mar" aria-describedby="nivel-error">
                     <span><span class="block font-semibold">Mando medio</span><span class="block text-sm text-grafito">Jefaturas, coordinación y gerencias de área.</span></span>
                   </label>
-                  <label for="nivel_directivo" class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-[#7F91A3] p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input id="nivel_directivo" type="radio" name="nivel" value="directivo" class="mt-1 h-5 w-5 accent-[#1F6F8B]" aria-describedby="nivel-error">
+                  <label for="nivel_directivo" class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-borde p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="nivel_directivo" type="radio" name="nivel" value="directivo" class="mt-1 h-5 w-5 accent-mar" aria-describedby="nivel-error">
                     <span><span class="block font-semibold">Directivo</span><span class="block text-sm text-grafito">Dirección general o de departamento.</span></span>
                   </label>
                 </div>
-                <p id="nivel-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                <p id="nivel-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </fieldset>
 
               <div class="sm:col-span-2">
                 <label for="habilidades" class="font-semibold">Habilidades principales <span class="text-alerta" aria-hidden="true">*</span></label>
                 <textarea id="habilidades" name="habilidades" rows="3" required maxlength="400" aria-describedby="habilidades-ayuda habilidades-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50"></textarea>
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50"></textarea>
                 <p id="habilidades-ayuda" class="mt-2 text-sm text-grafito">Escribe al menos tres, separadas por comas. Ejemplo: negociación, gestión de equipos, Salesforce.</p>
-                <p id="habilidades-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="habilidades-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div class="sm:col-span-2">
                 <label for="linkedin_url" class="font-semibold">Perfil de LinkedIn <span class="font-normal text-grafito">(opcional)</span></label>
                 <input id="linkedin_url" name="linkedin_url" type="url" inputmode="url" autocomplete="url" maxlength="200" aria-describedby="linkedin_url-ayuda linkedin_url-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="linkedin_url-ayuda" class="mt-2 text-sm text-grafito">Ejemplo: https://www.linkedin.com/in/tu-nombre</p>
-                <p id="linkedin_url-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="linkedin_url-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
             </div>
           </fieldset>
@@ -239,7 +239,7 @@
               <div>
                 <label for="idioma_ingles" class="font-semibold">Nivel de inglés <span class="text-alerta" aria-hidden="true">*</span></label>
                 <select id="idioma_ingles" name="idioma_ingles" required aria-describedby="idioma_ingles-ayuda idioma_ingles-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                   <option value="">Elige tu nivel</option>
                   <option value="ninguno">Sin conocimientos</option>
                   <option value="A1">A1 · Principiante</option>
@@ -250,38 +250,38 @@
                   <option value="C2">C2 · Nativo o bilingüe</option>
                 </select>
                 <p id="idioma_ingles-ayuda" class="mt-2 text-sm text-grafito">Según el Marco Común Europeo de Referencia.</p>
-                <p id="idioma_ingles-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="idioma_ingles-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="disponibilidad" class="font-semibold">¿Desde qué fecha podrías empezar? <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="disponibilidad" name="disponibilidad" type="date" required aria-describedby="disponibilidad-ayuda disponibilidad-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="disponibilidad-ayuda" class="mt-2 text-sm text-grafito">Desde hoy y hasta dentro de un año.</p>
-                <p id="disponibilidad-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="disponibilidad-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <label for="expectativa_salarial" class="font-semibold">Expectativa salarial bruta anual <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="expectativa_salarial" name="expectativa_salarial" type="number" inputmode="numeric" min="10000" max="1000000" step="1000" required aria-describedby="expectativa_salarial-ayuda expectativa_salarial-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="expectativa_salarial-ayuda" class="mt-2 text-sm text-grafito">Solo números, sin puntos. Ejemplo: 45000.</p>
-                <p id="expectativa_salarial-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="expectativa_salarial-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <fieldset aria-describedby="moneda-error">
                 <legend class="font-semibold">Moneda <span class="text-alerta" aria-hidden="true">*</span></legend>
                 <div class="mt-2 flex gap-3">
-                  <label for="moneda_EUR" class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-[#7F91A3] px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input id="moneda_EUR" type="radio" name="moneda" value="EUR" required class="h-5 w-5 accent-[#1F6F8B]" aria-describedby="moneda-error">
+                  <label for="moneda_EUR" class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-borde px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="moneda_EUR" type="radio" name="moneda" value="EUR" required class="h-5 w-5 accent-mar" aria-describedby="moneda-error">
                     <span class="font-semibold">EUR (€)</span>
                   </label>
-                  <label for="moneda_USD" class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-[#7F91A3] px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input id="moneda_USD" type="radio" name="moneda" value="USD" class="h-5 w-5 accent-[#1F6F8B]" aria-describedby="moneda-error">
+                  <label for="moneda_USD" class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-borde px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="moneda_USD" type="radio" name="moneda" value="USD" class="h-5 w-5 accent-mar" aria-describedby="moneda-error">
                     <span class="font-semibold">USD ($)</span>
                   </label>
                 </div>
-                <p id="moneda-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                <p id="moneda-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </fieldset>
             </div>
           </fieldset>
@@ -293,20 +293,20 @@
               <div>
                 <label for="cv" class="font-semibold">Adjunta tu CV <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="cv" name="cv" type="file" required accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" aria-describedby="cv-ayuda cv-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-dashed border-[#7F91A3] bg-white p-3 text-base text-grafito file:mr-4 file:cursor-pointer file:rounded-lg file:border-0 file:bg-tinta file:px-4 file:py-2 file:font-semibold file:text-white hover:file:bg-tinta-700 focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
+                  class="mt-2 block w-full rounded-xl border-2 border-dashed border-borde bg-white p-3 text-base text-grafito file:mr-4 file:cursor-pointer file:rounded-lg file:border-0 file:bg-tinta file:px-4 file:py-2 file:font-semibold file:text-white hover:file:bg-tinta-700 focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="cv-ayuda" class="mt-2 text-sm text-grafito">PDF, DOC o DOCX de máximo 5 MB.</p>
-                <p id="cv-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
+                <p id="cv-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
               <div>
                 <div class="flex items-start gap-3">
                   <input id="consentimiento_datos" name="consentimiento_datos" type="checkbox" required aria-describedby="consentimiento_datos-error"
-                    class="mt-1 h-5 w-5 shrink-0 accent-[#1F6F8B] aria-[invalid=true]:outline aria-[invalid=true]:outline-2 aria-[invalid=true]:outline-alerta">
+                    class="mt-1 h-5 w-5 shrink-0 accent-mar aria-[invalid=true]:outline aria-[invalid=true]:outline-2 aria-[invalid=true]:outline-alerta">
                   <label for="consentimiento_datos" class="leading-relaxed">
                     Acepto que Nexova Solutions trate mis datos personales para gestionar esta y futuras postulaciones, según el Reglamento General de Protección de Datos (RGPD). Puedo pedir verlos o borrarlos en cualquier momento. <span class="text-alerta" aria-hidden="true">*</span>
                   </label>
                 </div>
-                <p id="consentimiento_datos-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                <p id="consentimiento_datos-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
             </div>
           </fieldset>
@@ -315,7 +315,7 @@
             <button type="reset" class="inline-flex items-center justify-center rounded-xl border-2 border-tinta px-6 py-3.5 text-lg font-bold text-tinta hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-mar focus-visible:ring-offset-2">
               Borrar formulario
             </button>
-            <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-azahar px-8 py-4 text-lg font-bold text-tinta shadow-sm hover:bg-[#E68A1A] focus:outline-none focus-visible:ring-2 focus-visible:ring-tinta focus-visible:ring-offset-2">
+            <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-azahar px-8 py-4 text-lg font-bold text-tinta shadow-sm hover:bg-azahar-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-tinta focus-visible:ring-offset-2">
               Enviar postulación
             </button>
           </div>
@@ -325,7 +325,7 @@
   </main>
 
   <!-- PIE DE PÁGINA -->
-  <footer class="mt-8 bg-tinta text-[#C9D6E2]">
+  <footer class="mt-8 bg-tinta text-tinta-200">
     <div class="mx-auto flex max-w-contenido flex-col gap-6 px-4 py-10 sm:px-6 md:flex-row md:items-center md:justify-between">
       <a href="index.html" class="inline-flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">
         <img src="assets/img/logo-nexova.svg" alt="Logotipo de Nexova Solutions" width="36" height="36" class="h-9 w-9 rounded-lg ring-1 ring-tinta-600" loading="lazy">
