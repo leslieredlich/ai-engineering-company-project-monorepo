@@ -202,12 +202,12 @@
               <fieldset class="sm:col-span-2" aria-describedby="nivel-error">
                 <legend class="font-semibold">Nivel de cargo al que postulas <span class="text-alerta" aria-hidden="true">*</span></legend>
                 <div class="mt-3 grid gap-3 sm:grid-cols-2">
-                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-[#7F91A3] p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input type="radio" name="nivel" value="mando_medio" required class="mt-1 h-5 w-5 accent-[#1F6F8B]" aria-describedby="nivel-error">
+                  <label for="nivel_mando_medio" class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-[#7F91A3] p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="nivel_mando_medio" type="radio" name="nivel" value="mando_medio" required class="mt-1 h-5 w-5 accent-[#1F6F8B]" aria-describedby="nivel-error">
                     <span><span class="block font-semibold">Mando medio</span><span class="block text-sm text-grafito">Jefaturas, coordinación y gerencias de área.</span></span>
                   </label>
-                  <label class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-[#7F91A3] p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input type="radio" name="nivel" value="directivo" class="mt-1 h-5 w-5 accent-[#1F6F8B]" aria-describedby="nivel-error">
+                  <label for="nivel_directivo" class="flex cursor-pointer items-start gap-3 rounded-xl border-2 border-[#7F91A3] p-4 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="nivel_directivo" type="radio" name="nivel" value="directivo" class="mt-1 h-5 w-5 accent-[#1F6F8B]" aria-describedby="nivel-error">
                     <span><span class="block font-semibold">Directivo</span><span class="block text-sm text-grafito">Dirección general o de departamento.</span></span>
                   </label>
                 </div>
@@ -254,16 +254,11 @@
               </div>
 
               <div>
-                <label for="disponibilidad" class="font-semibold">Disponibilidad para empezar <span class="text-alerta" aria-hidden="true">*</span></label>
-                <select id="disponibilidad" name="disponibilidad" required aria-describedby="disponibilidad-error"
+                <label for="disponibilidad" class="font-semibold">¿Desde qué fecha podrías empezar? <span class="text-alerta" aria-hidden="true">*</span></label>
+                <input id="disponibilidad" name="disponibilidad" type="date" required aria-describedby="disponibilidad-ayuda disponibilidad-error"
                   class="mt-2 block w-full rounded-xl border-2 border-[#7F91A3] bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
-                  <option value="">Elige una opción</option>
-                  <option value="inmediata">Inmediata</option>
-                  <option value="15_dias">En 15 días</option>
-                  <option value="30_dias">En 30 días</option>
-                  <option value="mas_30_dias">En más de 30 días</option>
-                </select>
-                <p id="disponibilidad-error" class="mt-2 hidden text-sm font-semibold text-alerta"></p>
+                <p id="disponibilidad-ayuda" class="mt-2 text-sm text-grafito">Desde hoy y hasta dentro de un año.</p>
+                <p id="disponibilidad-error" class="mt-1 hidden text-sm font-semibold text-alerta"></p>
               </div>
 
               <div>
@@ -277,12 +272,12 @@
               <fieldset aria-describedby="moneda-error">
                 <legend class="font-semibold">Moneda <span class="text-alerta" aria-hidden="true">*</span></legend>
                 <div class="mt-2 flex gap-3">
-                  <label class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-[#7F91A3] px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input type="radio" name="moneda" value="EUR" required class="h-5 w-5 accent-[#1F6F8B]" aria-describedby="moneda-error">
+                  <label for="moneda_EUR" class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-[#7F91A3] px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="moneda_EUR" type="radio" name="moneda" value="EUR" required class="h-5 w-5 accent-[#1F6F8B]" aria-describedby="moneda-error">
                     <span class="font-semibold">EUR (€)</span>
                   </label>
-                  <label class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-[#7F91A3] px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
-                    <input type="radio" name="moneda" value="USD" class="h-5 w-5 accent-[#1F6F8B]" aria-describedby="moneda-error">
+                  <label for="moneda_USD" class="flex flex-1 cursor-pointer items-center gap-3 rounded-xl border-2 border-[#7F91A3] px-4 py-3 has-[:checked]:border-mar has-[:checked]:bg-niebla has-[[aria-invalid=true]]:border-alerta has-[[aria-invalid=true]]:bg-alerta-50">
+                    <input id="moneda_USD" type="radio" name="moneda" value="USD" class="h-5 w-5 accent-[#1F6F8B]" aria-describedby="moneda-error">
                     <span class="font-semibold">USD ($)</span>
                   </label>
                 </div>
@@ -316,8 +311,10 @@
             </div>
           </fieldset>
 
-          <div class="flex flex-col-reverse gap-4 sm:flex-row sm:items-center sm:justify-between">
-            <p class="text-sm text-grafito">Revisamos todos los campos antes de enviar.</p>
+          <div class="flex flex-col-reverse gap-3 sm:flex-row sm:items-center sm:justify-end">
+            <button type="reset" class="inline-flex items-center justify-center rounded-xl border-2 border-tinta px-6 py-3.5 text-lg font-bold text-tinta hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-mar focus-visible:ring-offset-2">
+              Borrar formulario
+            </button>
             <button type="submit" class="inline-flex items-center justify-center rounded-xl bg-azahar px-8 py-4 text-lg font-bold text-tinta shadow-sm hover:bg-[#E68A1A] focus:outline-none focus-visible:ring-2 focus-visible:ring-tinta focus-visible:ring-offset-2">
               Enviar postulación
             </button>

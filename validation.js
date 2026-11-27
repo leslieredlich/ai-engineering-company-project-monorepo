@@ -27,6 +27,21 @@
   const TAMANO_MAX_CV = 5 * 1024 * 1024; // 5 MB
   const EXTENSIONES_CV = ['pdf', 'doc', 'docx'];
 
+  // Fechas límite para `disponibilidad` (formato AAAA-MM-DD, en hora local).
+  function aISO(fecha) {
+    const mm = String(fecha.getMonth() + 1).padStart(2, '0');
+    const dd = String(fecha.getDate()).padStart(2, '0');
+    return `${fecha.getFullYear()}-${mm}-${dd}`;
+  }
+  const hoy = new Date();
+  const FECHA_HOY = aISO(hoy);
+  const FECHA_MAX = aISO(new Date(hoy.getFullYear() + 1, hoy.getMonth(), hoy.getDate()));
+  const campoFecha = document.getElementById('disponibilidad');
+  if (campoFecha) {
+    campoFecha.min = FECHA_HOY;
+    campoFecha.max = FECHA_MAX;
+  }
+
   // Nombre legible de cada campo, usado en el resumen de errores.
   const ETIQUETAS = {
     nombre: 'Nombre y apellidos',
@@ -143,7 +158,11 @@
     },
 
     disponibilidad(v) {
-      return v ? '' : 'Elige cuándo podrías empezar.';
+      if (!v) return 'Elige la fecha desde la que podrías empezar.';
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(v) || Number.isNaN(Date.parse(v))) return 'La fecha no es válida. Usa el formato día/mes/año.';
+      if (v < FECHA_HOY) return 'La fecha ya pasó. Elige hoy o una fecha futura.';
+      if (v > FECHA_MAX) return 'Elige una fecha dentro de los próximos 12 meses.';
+      return '';
     },
 
     expectativa_salarial(v) {
@@ -228,7 +247,7 @@
 
     // Radios, checkbox, selects y archivo se validan al cambiar.
     const tipo = evento.target.type;
-    if (tipo === 'radio' || tipo === 'checkbox' || tipo === 'file' || evento.target.tagName === 'SELECT') {
+    if (['radio', 'checkbox', 'file', 'date'].includes(tipo) || evento.target.tagName === 'SELECT') {
       validarCampo(nombre);
     }
 
@@ -275,6 +294,7 @@
   function recogerDatos() {
     const archivo = valor('cv');
     return {
+      candidato_id: window.crypto && crypto.randomUUID ? crypto.randomUUID() : `cand-${Date.now()}`,
       nombre: valor('nombre'),
       email: valor('email'),
       telefono: valor('telefono'),
@@ -295,6 +315,18 @@
       fecha_registro: new Date().toISOString(),
     };
   }
+
+  // Botón "Borrar formulario": además de vaciar los campos, quita errores y avisos.
+  let limpiandoTrasEnvio = false;
+  formulario.addEventListener('reset', () => {
+    if (limpiandoTrasEnvio) return; // el envío exitoso gestiona sus propios avisos
+    Object.keys(REGLAS).forEach((nombre) => mostrarError(nombre, ''));
+    resumen.classList.add('hidden');
+    exito.classList.add('hidden');
+    listaErrores.innerHTML = '';
+    // Tras vaciar, llevar el foco al primer campo.
+    setTimeout(() => document.getElementById('nombre').focus(), 0);
+  });
 
   formulario.addEventListener('submit', (evento) => {
     evento.preventDefault();
@@ -317,7 +349,9 @@
     const primerNombre = datos.nombre.split(/\s+/)[0];
     textoExito.textContent = `Gracias, ${primerNombre}. Recibimos tu postulación y te escribiremos a ${datos.email} cuando un consultor la revise.`;
 
+    limpiandoTrasEnvio = true;
     formulario.reset();
+    limpiandoTrasEnvio = false;
     Object.keys(REGLAS).forEach((nombre) => mostrarError(nombre, ''));
     exito.classList.remove('hidden');
     exito.focus();
