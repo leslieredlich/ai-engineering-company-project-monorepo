@@ -131,7 +131,7 @@
                 <p id="nombre-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
 
-              <div>
+              <div class="sm:col-span-2">
                 <label for="email" class="font-semibold">Email <span class="text-alerta" aria-hidden="true">*</span></label>
                 <input id="email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="120" aria-describedby="email-ayuda email-error"
                   class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
@@ -156,13 +156,6 @@
                   class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
                 <p id="telefono-ayuda" class="mt-2 text-sm text-grafito">Ejemplo: +34 612 345 678 o +1 305 555 0123.</p>
                 <p id="telefono-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
-              </div>
-
-              <div>
-                <label for="ciudad" class="font-semibold">Ciudad <span class="text-alerta" aria-hidden="true">*</span></label>
-                <input id="ciudad" name="ciudad" type="text" autocomplete="address-level2" required maxlength="60" aria-describedby="ciudad-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
-                <p id="ciudad-error" class="mt-2 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
             </div>
           </fieldset>
@@ -220,14 +213,6 @@
                   class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50"></textarea>
                 <p id="habilidades-ayuda" class="mt-2 text-sm text-grafito">Escribe al menos tres, separadas por comas. Ejemplo: negociación, gestión de equipos, Salesforce.</p>
                 <p id="habilidades-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
-              </div>
-
-              <div class="sm:col-span-2">
-                <label for="linkedin_url" class="font-semibold">Perfil de LinkedIn <span class="font-normal text-grafito">(opcional)</span></label>
-                <input id="linkedin_url" name="linkedin_url" type="url" inputmode="url" autocomplete="url" maxlength="200" aria-describedby="linkedin_url-ayuda linkedin_url-error"
-                  class="mt-2 block w-full rounded-xl border-2 border-borde bg-white px-4 py-3 text-base text-tinta focus:border-mar focus:outline-none focus:ring-4 focus:ring-mar/20 aria-[invalid=true]:border-alerta aria-[invalid=true]:bg-alerta-50">
-                <p id="linkedin_url-ayuda" class="mt-2 text-sm text-grafito">Ejemplo: https://www.linkedin.com/in/tu-nombre</p>
-                <p id="linkedin_url-error" class="mt-1 text-sm font-semibold text-alerta empty:mt-0" aria-live="polite"></p>
               </div>
             </div>
           </fieldset>

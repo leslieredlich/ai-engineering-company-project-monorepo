@@ -23,7 +23,6 @@
   const REGEX_NOMBRE = /^[\p{L}][\p{L}'’.\- ]*[\p{L}.]$/u;
   const REGEX_EMAIL = /^[^\s@]+@[^\s@]+\.[^\s@.]{2,}$/;
   const REGEX_TELEFONO = /^\+?[\d\s().-]+$/;
-  const REGEX_LINKEDIN = /^https:\/\/([a-z]{2,3}\.)?linkedin\.com\/in\/[\w\-áéíóúüñ%]+\/?$/i;
   const TAMANO_MAX_CV = 5 * 1024 * 1024; // 5 MB
   const EXTENSIONES_CV = ['pdf', 'doc', 'docx'];
 
@@ -48,13 +47,11 @@
     email: 'Email',
     pais: 'País de residencia',
     telefono: 'Teléfono',
-    ciudad: 'Ciudad',
     cargo_actual: 'Cargo actual',
     sector: 'Sector',
     anios_experiencia: 'Años de experiencia',
     nivel: 'Nivel de cargo',
     habilidades: 'Habilidades principales',
-    linkedin_url: 'Perfil de LinkedIn',
     idioma_ingles: 'Nivel de inglés',
     disponibilidad: 'Disponibilidad',
     expectativa_salarial: 'Expectativa salarial',
@@ -111,11 +108,6 @@
       return '';
     },
 
-    ciudad(v) {
-      if (!v) return 'Escribe tu ciudad.';
-      if (v.length < 2 || !/^[\p{L}][\p{L}'’.\- ]*$/u.test(v)) return 'Escribe un nombre de ciudad válido, solo con letras.';
-      return '';
-    },
 
     cargo_actual(v) {
       if (!v) return 'Escribe tu cargo actual o el último que tuviste.';
@@ -147,11 +139,6 @@
       return '';
     },
 
-    linkedin_url(v) {
-      if (!v) return ''; // opcional
-      if (!REGEX_LINKEDIN.test(v)) return 'El enlace debe ser un perfil de LinkedIn, por ejemplo https://www.linkedin.com/in/tu-nombre.';
-      return '';
-    },
 
     idioma_ingles(v) {
       return v ? '' : 'Elige tu nivel de inglés.';
@@ -298,13 +285,11 @@
       email: valor('email'),
       telefono: valor('telefono'),
       pais: valor('pais'),
-      ciudad: valor('ciudad'),
       cargo_actual: valor('cargo_actual'),
       sector: valor('sector'),
       anios_experiencia: Number(valor('anios_experiencia')),
       nivel: valor('nivel'),
       habilidades: valor('habilidades').split(',').map((h) => h.trim()).filter(Boolean),
-      linkedin_url: valor('linkedin_url') || null,
       idiomas: { ingles: valor('idioma_ingles') },
       expectativa_salarial: Number(valor('expectativa_salarial')),
       moneda: valor('moneda'),
