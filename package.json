@@ -1,0 +1,9 @@
+{
+  "name": "nexova-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web público de Nexova Solutions: landing page y formulario de postulación de candidatos.",
+  "scripts": {
+    "start": "npx --yes serve -l 3000 ."
+  }
+}

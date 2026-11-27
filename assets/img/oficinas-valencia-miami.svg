@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 240" fill="none">
+  <rect width="480" height="240" rx="20" fill="#1B3F63"/>
+  <g stroke="#2C5680" stroke-width="1">
+    <path d="M0 60h480M0 120h480M0 180h480M80 0v240M160 0v240M240 0v240M320 0v240M400 0v240"/>
+  </g>
+  <path d="M108 150 C 190 40, 300 40, 372 112" stroke="#F29A2E" stroke-width="3" stroke-dasharray="2 9" stroke-linecap="round"/>
+  <g>
+    <circle cx="108" cy="150" r="22" fill="#F29A2E" opacity=".2"/>
+    <circle cx="108" cy="150" r="9" fill="#F29A2E"/>
+    <text x="108" y="196" fill="#FFFFFF" font-family="sans-serif" font-size="17" font-weight="700" text-anchor="middle">Miami</text>
+    <text x="108" y="215" fill="#C9D6E2" font-family="sans-serif" font-size="13" text-anchor="middle">Estados Unidos</text>
+  </g>
+  <g>
+    <circle cx="372" cy="112" r="22" fill="#FFFFFF" opacity=".18"/>
+    <circle cx="372" cy="112" r="9" fill="#FFFFFF"/>
+    <text x="372" y="158" fill="#FFFFFF" font-family="sans-serif" font-size="17" font-weight="700" text-anchor="middle">Valencia</text>
+    <text x="372" y="177" fill="#C9D6E2" font-family="sans-serif" font-size="13" text-anchor="middle">España · sede central</text>
+  </g>
+</svg>
