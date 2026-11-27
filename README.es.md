@@ -9,6 +9,29 @@ _These instructions are also available in [English](./README.md)._
 
 ---
 
+## Sitio web público de Nexova Solutions
+
+| Archivo | Qué es |
+|---|---|
+| [`index.html`](./index.html) | Landing page: servicios, trayectoria, cómo postular y contacto. Incluye Schema.org (`Organization`). |
+| [`application.html`](./application.html) | Formulario de postulación de candidatos (campos de la entidad *Candidato* de `CONTEXT.md`). |
+| [`validation.js`](./validation.js) | Validación completa del formulario con mensajes de error accesibles. |
+| [`assets/`](./assets/) | Logo, íconos SVG, configuración de Tailwind y menú móvil. |
+
+**Stack:** HTML5 semántico + Tailwind CSS (CDN) + JavaScript sin librerías.
+
+**Ejecutar en local:**
+
+```bash
+npx serve -l 3000 .
+# o bien
+npm start
+```
+
+Abre http://localhost:3000. El formulario todavía no envía datos a un servidor: si todo es válido, muestra un mensaje de éxito y deja en la consola del navegador los datos que se enviarían.
+
+---
+
 ## Propósito
 
 Este repositorio es la **plantilla de inicio** para los proyectos transversales. Trabajarás con escenarios de empresas reales (Brasaland, TrackFlow, Nexova) construyendo entregables que se corresponden con los hitos del curso (Web, Programación, Backend, Telemetría, RAG, Agentes, Workflows, Tiempo real).

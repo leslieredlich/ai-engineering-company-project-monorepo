@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="es" class="motion-safe:scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nexova Solutions | Headhunting, soporte al cliente y formación en España y EE. UU.</title>
+  <meta name="description" content="Consultora de selección de talento desde 2011. Buscamos mandos medios y directivos, gestionamos equipos de soporte al cliente y formamos líderes en Valencia y Miami.">
+  <meta name="theme-color" content="#0F2A44">
+  <link rel="canonical" href="https://leslieredlich.github.io/ai-engineering-company-project-monorepo/">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+  <!-- Open Graph para compartir en redes -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Nexova Solutions">
+  <meta property="og:title" content="Nexova Solutions | Talento para empresas que crecen">
+  <meta property="og:description" content="Headhunting de mandos medios y directivos, soporte al cliente externalizado y formación en liderazgo.">
+  <meta property="og:url" content="https://leslieredlich.github.io/ai-engineering-company-project-monorepo/">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script src="assets/js/tailwind-config.js"></script>
+
+  <!-- Schema.org: datos estructurados de la empresa -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://leslieredlich.github.io/ai-engineering-company-project-monorepo/#organizacion",
+    "name": "Nexova Solutions",
+    "url": "https://leslieredlich.github.io/ai-engineering-company-project-monorepo/",
+    "logo": "https://leslieredlich.github.io/ai-engineering-company-project-monorepo/assets/img/logo-nexova.svg",
+    "description": "Consultora de recursos humanos y selección de talento: headhunting de mandos medios y directivos, outsourcing de equipos de soporte al cliente y formación corporativa en habilidades blandas y liderazgo.",
+    "foundingDate": "2011",
+    "founder": { "@type": "Person", "name": "Laura Mendoza", "jobTitle": "CEO" },
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": 120 },
+    "email": "contacto@nexova.example",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Valencia",
+      "addressRegion": "Comunidad Valenciana",
+      "addressCountry": "ES"
+    },
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Nexova Solutions Valencia (sede central)",
+        "address": { "@type": "PostalAddress", "addressLocality": "Valencia", "addressCountry": "ES" }
+      },
+      {
+        "@type": "Place",
+        "name": "Nexova Solutions Miami",
+        "address": { "@type": "PostalAddress", "addressLocality": "Miami", "addressRegion": "FL", "addressCountry": "US" }
+      }
+    ],
+    "areaServed": [
+      { "@type": "Country", "name": "España" },
+      { "@type": "Country", "name": "Estados Unidos" }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "empresas@nexova.example",
+        "telephone": "+34-960-000-000",
+        "areaServed": "ES",
+        "availableLanguage": ["es", "en"]
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "email": "empresas@nexova.example",
+        "telephone": "+1-305-000-0000",
+        "areaServed": "US",
+        "availableLanguage": ["es", "en"]
+      }
+    ],
+    "knowsAbout": ["Headhunting", "Selección de personal", "Outsourcing de atención al cliente", "Formación en liderazgo"],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Servicios de Nexova Solutions",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Headhunting de mandos medios y directivos" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Equipos de soporte al cliente externalizados" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Formación corporativa en liderazgo y habilidades blandas" } }
+      ]
+    }
+  }
+  </script>
+</head>
+<body class="bg-white font-sans text-tinta antialiased">
+  <a href="#contenido" class="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-azahar focus:px-4 focus:py-2 focus:font-semibold focus:text-tinta">Saltar al contenido principal</a>
+
+  <!-- ENCABEZADO -->
+  <header class="sticky top-0 z-40 border-b border-niebla bg-white/95 backdrop-blur">
+    <div class="mx-auto flex max-w-contenido flex-wrap items-center justify-between gap-x-6 px-4 py-3 sm:px-6">
+      <a href="index.html" class="flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-mar focus-visible:ring-offset-2">
+        <img src="assets/img/logo-nexova.svg" alt="Logotipo de Nexova Solutions: una N blanca sobre un cuadrado azul con un punto naranja" width="40" height="40" class="h-10 w-10">
+        <span class="font-display text-xl font-extrabold tracking-tight">Nexova<span class="sr-only"> Solutions</span></span>
+      </a>
+
+      <button id="boton-menu" type="button" class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-tinta hover:bg-niebla focus:outline-none focus-visible:ring-2 focus-visible:ring-mar md:hidden" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
+        <svg aria-hidden="true" viewBox="0 0 24 24" class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+
+      <nav id="menu-principal" aria-label="Navegación principal" class="hidden w-full md:flex md:w-auto">
+        <ul class="flex flex-col gap-1 py-3 md:flex-row md:items-center md:gap-1 md:py-0">
+          <li><a href="#servicios" class="block rounded-lg px-3 py-2 font-semibold text-grafito hover:bg-niebla hover:text-tinta focus:outline-none focus-visible:ring-2 focus-visible:ring-mar">Servicios</a></li>
+          <li><a href="#trayectoria" class="block rounded-lg px-3 py-2 font-semibold text-grafito hover:bg-niebla hover:text-tinta focus:outline-none focus-visible:ring-2 focus-visible:ring-mar">Quiénes somos</a></li>
+          <li><a href="#como-postular" class="block rounded-lg px-3 py-2 font-semibold text-grafito hover:bg-niebla hover:text-tinta focus:outline-none focus-visible:ring-2 focus-visible:ring-mar">Cómo postular</a></li>
+          <li><a href="#contacto" class="block rounded-lg px-3 py-2 font-semibold text-grafito hover:bg-niebla hover:text-tinta focus:outline-none focus-visible:ring-2 focus-visible:ring-mar">Contacto</a></li>
+          <li class="mt-2 md:ml-3 md:mt-0"><a href="application.html" class="block rounded-lg bg-tinta px-4 py-2 text-center font-semibold text-white hover:bg-tinta-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar focus-visible:ring-offset-2">Postular</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- HERO -->
+    <section aria-labelledby="titulo-hero" class="relative overflow-hidden bg-niebla">
+      <div class="mx-auto grid max-w-contenido gap-12 px-4 py-16 sm:px-6 md:py-20 lg:grid-cols-12 lg:items-center lg:py-24">
+        <div class="lg:col-span-7">
+          <h1 id="titulo-hero" class="font-display text-4xl font-extrabold leading-titular tracking-tight sm:text-5xl lg:text-6xl">
+            Encontramos a las personas que van a liderar tu empresa.
+          </h1>
+          <p class="mt-6 max-w-xl text-lg leading-relaxed text-grafito sm:text-xl">
+            Desde 2011 buscamos mandos medios y directivos, formamos equipos y atendemos a los clientes de empresas de tecnología, retail y servicios financieros en España y Estados Unidos.
+          </p>
+          <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+            <a href="application.html" class="inline-flex items-center justify-center rounded-xl bg-azahar px-6 py-3.5 text-lg font-bold text-tinta shadow-sm hover:bg-azahar-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-tinta focus-visible:ring-offset-2">
+              Postular a un proceso
+            </a>
+            <a href="#contacto" class="inline-flex items-center justify-center rounded-xl border-2 border-tinta px-6 py-3 text-lg font-bold text-tinta hover:bg-white focus:outline-none focus-visible:ring-2 focus-visible:ring-mar focus-visible:ring-offset-2">
+              Contratar a Nexova
+            </a>
+          </div>
+        </div>
+
+        <!-- Tarjeta de seguimiento: el elemento memorable de la página -->
+        <figure class="mx-auto w-full max-w-sm lg:col-span-5">
+          <div class="rounded-3xl bg-tinta p-6 text-white shadow-2xl shadow-tinta/40 sm:p-7">
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <p class="text-sm text-tinta-200">Tu postulación</p>
+                <p class="mt-1 font-display text-xl font-semibold leading-snug">Jefa de Customer Success</p>
+                <p class="text-sm text-tinta-200">Empresa de tecnología, Valencia</p>
+              </div>
+              <span class="shrink-0 rounded-full bg-azahar px-3 py-1 text-xs font-bold text-tinta">Actualizada hoy</span>
+            </div>
+            <ol class="mt-6 space-y-4" aria-label="Etapas de la postulación de ejemplo">
+              <li class="flex items-center gap-3">
+                <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-tinta" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 10 3.5 3.5L15 7"/></svg>
+                </span>
+                <span>Recibida <span class="sr-only">(completada)</span></span>
+              </li>
+              <li class="flex items-center gap-3">
+                <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-white text-tinta" aria-hidden="true">
+                  <svg viewBox="0 0 20 20" class="h-4 w-4" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m5 10 3.5 3.5L15 7"/></svg>
+                </span>
+                <span>Revisada por un consultor <span class="sr-only">(completada)</span></span>
+              </li>
+              <li class="flex items-center gap-3" aria-current="step">
+                <span class="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-azahar" aria-hidden="true">
+                  <span class="h-2.5 w-2.5 rounded-full bg-azahar"></span>
+                </span>
+                <span class="font-semibold text-azahar">Entrevista con el consultor <span class="sr-only">(etapa actual)</span></span>
+              </li>
+              <li class="flex items-center gap-3 text-tinta-300">
+                <span class="h-7 w-7 shrink-0 rounded-full border-2 border-tinta-600" aria-hidden="true"></span>
+                <span>Entrevista con la empresa</span>
+              </li>
+              <li class="flex items-center gap-3 text-tinta-300">
+                <span class="h-7 w-7 shrink-0 rounded-full border-2 border-tinta-600" aria-hidden="true"></span>
+                <span>Decisión final</span>
+              </li>
+            </ol>
+          </div>
+          <figcaption class="mt-4 px-2 text-center text-sm text-grafito">
+            Ejemplo: te avisamos por email cada vez que tu postulación cambia de etapa.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SERVICIOS -->
+    <section id="servicios" aria-labelledby="titulo-servicios" class="scroll-mt-20 py-16 md:py-24">
+      <div class="mx-auto max-w-contenido px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <h2 id="titulo-servicios" class="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Tres formas de ayudarte con tu equipo</h2>
+          <p class="mt-4 text-lg leading-relaxed text-grafito">Trabajamos con medianas empresas que prefieren dejar en manos expertas una parte o toda la gestión de su talento.</p>
+        </div>
+
+        <div class="mt-12 grid gap-10 md:grid-cols-3 md:gap-0 md:divide-x md:divide-niebla">
+          <article class="md:pr-8">
+            <img src="assets/img/icono-headhunting.svg" alt="Ícono de una persona junto a una lupa, que representa la búsqueda de candidatos" width="48" height="48" class="h-12 w-12" loading="lazy">
+            <h3 class="mt-5 font-display text-xl font-semibold">Headhunting de mandos medios y directivos</h3>
+            <p class="mt-3 leading-relaxed text-grafito">Buscamos, evaluamos y presentamos candidatos para cargos de jefatura y dirección. Un mismo consultor te acompaña desde que defines el perfil hasta la contratación.</p>
+          </article>
+          <article class="md:px-8">
+            <img src="assets/img/icono-soporte.svg" alt="Ícono de unos auriculares con micrófono, que representa la atención al cliente" width="48" height="48" class="h-12 w-12" loading="lazy">
+            <h3 class="mt-5 font-display text-xl font-semibold">Equipos de soporte al cliente</h3>
+            <p class="mt-3 leading-relaxed text-grafito">Ponemos a tu servicio un equipo dedicado que atiende a tus clientes por teléfono, email y chat, con tu marca y tus procesos.</p>
+          </article>
+          <article class="md:pl-8">
+            <img src="assets/img/icono-formacion.svg" alt="Ícono de un birrete de graduación, que representa la formación" width="48" height="48" class="h-12 w-12" loading="lazy">
+            <h3 class="mt-5 font-display text-xl font-semibold">Formación en liderazgo</h3>
+            <p class="mt-3 leading-relaxed text-grafito">Cursos, talleres y webinars sobre liderazgo, comunicación y gestión de equipos para que tus mandos lideren mejor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRAYECTORIA / POR QUÉ NEXOVA -->
+    <section id="trayectoria" aria-labelledby="titulo-trayectoria" class="scroll-mt-20 bg-tinta py-16 text-white md:py-24">
+      <div class="mx-auto grid max-w-contenido gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
+        <div>
+          <h2 id="titulo-trayectoria" class="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">Más de una década conociendo a las personas detrás de cada cargo</h2>
+          <p class="mt-4 text-lg leading-relaxed text-tinta-200">Encontrar a la persona adecuada, formarla y mantenerla motivada es difícil. Llevamos desde 2011 aprendiendo a hacerlo bien.</p>
+
+          <ol class="mt-10 space-y-8 border-l-2 border-tinta-600 pl-6" aria-label="Trayectoria de Nexova">
+            <li class="relative">
+              <span class="absolute -left-8 top-1.5 h-4 w-4 rounded-full border-2 border-tinta bg-azahar" aria-hidden="true"></span>
+              <p class="font-display text-2xl font-extrabold text-azahar">2011</p>
+              <p class="mt-1 leading-relaxed text-tinta-100">Nace en Valencia como una consultora de dos personas.</p>
+            </li>
+            <li class="relative">
+              <span class="absolute -left-8 top-1.5 h-4 w-4 rounded-full border-2 border-tinta bg-white" aria-hidden="true"></span>
+              <p class="font-display text-xl font-semibold">Tres líneas de negocio</p>
+              <p class="mt-1 leading-relaxed text-tinta-100">Al headhunting se suman el soporte al cliente externalizado y la formación corporativa.</p>
+            </li>
+            <li class="relative">
+              <span class="absolute -left-8 top-1.5 h-4 w-4 rounded-full border-2 border-tinta bg-white" aria-hidden="true"></span>
+              <p class="font-display text-xl font-semibold">Llegada a Estados Unidos</p>
+              <p class="mt-1 leading-relaxed text-tinta-100">Abrimos oficina en Miami para acompañar a clientes a ambos lados del Atlántico.</p>
+            </li>
+            <li class="relative">
+              <span class="absolute -left-8 top-1.5 h-4 w-4 rounded-full border-2 border-tinta bg-azahar" aria-hidden="true"></span>
+              <p class="font-display text-2xl font-extrabold text-azahar">Hoy</p>
+              <p class="mt-1 leading-relaxed text-tinta-100">120 personas en dos países y una red de candidatos y clientes construida durante años.</p>
+            </li>
+          </ol>
+        </div>
+
+        <figure>
+          <img src="assets/img/oficinas-valencia-miami.svg" alt="Mapa simplificado con las dos oficinas de Nexova: Valencia, en España, que es la sede central, y Miami, en Estados Unidos, unidas por una línea punteada" width="480" height="240" class="w-full rounded-2xl" loading="lazy">
+          <figcaption class="mt-4 text-tinta-200">
+            Atendemos a empresas de <strong class="font-semibold text-white">tecnología</strong>, <strong class="font-semibold text-white">retail</strong> y <strong class="font-semibold text-white">servicios financieros</strong> desde Valencia y Miami, en español e inglés.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- CÓMO POSTULAR -->
+    <section id="como-postular" aria-labelledby="titulo-postular" class="scroll-mt-20 py-16 md:py-24">
+      <div class="mx-auto max-w-contenido px-4 sm:px-6">
+        <div class="max-w-2xl">
+          <h2 id="titulo-postular" class="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">¿Buscas tu próximo cargo? Así es postular con nosotros</h2>
+          <p class="mt-4 text-lg leading-relaxed text-grafito">Siempre sabes en qué etapa está tu postulación, también cuando no sigue adelante.</p>
+        </div>
+
+        <ol class="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+          <li>
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-azahar font-display text-lg font-extrabold text-tinta" aria-hidden="true">1</span>
+            <h3 class="mt-4 font-display text-lg font-semibold">Completa el formulario</h3>
+            <p class="mt-2 leading-relaxed text-grafito">Tus datos, tu experiencia y tu CV. Te toma unos cinco minutos.</p>
+          </li>
+          <li>
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-niebla font-display text-lg font-extrabold text-tinta" aria-hidden="true">2</span>
+            <h3 class="mt-4 font-display text-lg font-semibold">Revisamos tu perfil</h3>
+            <p class="mt-2 leading-relaxed text-grafito">Un consultor lo compara con las vacantes abiertas de nuestros clientes.</p>
+          </li>
+          <li>
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-niebla font-display text-lg font-extrabold text-tinta" aria-hidden="true">3</span>
+            <h3 class="mt-4 font-display text-lg font-semibold">Conversamos</h3>
+            <p class="mt-2 leading-relaxed text-grafito">Si tu perfil encaja con una vacante, te llamamos para una entrevista.</p>
+          </li>
+          <li>
+            <span class="flex h-11 w-11 items-center justify-center rounded-full bg-niebla font-display text-lg font-extrabold text-tinta" aria-hidden="true">4</span>
+            <h3 class="mt-4 font-display text-lg font-semibold">Te avisamos en cada paso</h3>
+            <p class="mt-2 leading-relaxed text-grafito">Recibes un email cada vez que tu postulación avanza o se cierra.</p>
+          </li>
+        </ol>
+
+        <div class="mt-12 flex flex-col gap-6 rounded-2xl border-2 border-niebla p-6 sm:p-8 md:flex-row md:items-center md:justify-between">
+          <p class="max-w-2xl leading-relaxed text-grafito">
+            <strong class="font-semibold text-tinta">Una persona revisa cada postulación.</strong>
+            No te pedimos foto, edad ni estado civil: solo lo que sirve para valorar tu experiencia.
+          </p>
+          <a href="application.html" class="inline-flex shrink-0 items-center justify-center rounded-xl bg-tinta px-6 py-3.5 text-lg font-bold text-white hover:bg-tinta-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar focus-visible:ring-offset-2">
+            Postular ahora
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO EMPRESAS -->
+    <section id="contacto" aria-labelledby="titulo-contacto" class="scroll-mt-20 bg-azahar-100 py-16 md:py-20">
+      <div class="mx-auto grid max-w-contenido gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
+        <div>
+          <h2 id="titulo-contacto" class="font-display text-3xl font-extrabold tracking-tight sm:text-4xl">¿Tu empresa necesita contratar, formar o atender mejor?</h2>
+          <p class="mt-4 text-lg leading-relaxed text-tinta/80">Cuéntanos qué necesitas y un account manager te responde en un día hábil.</p>
+        </div>
+        <address class="grid gap-4 not-italic sm:grid-cols-2">
+          <div class="rounded-2xl bg-white p-6">
+            <p class="font-display text-lg font-semibold">Valencia, España</p>
+            <p class="text-sm text-grafito">Sede central</p>
+            <p class="mt-3"><a href="tel:+34960000000" class="font-semibold text-mar underline underline-offset-4 hover:text-tinta focus:outline-none focus-visible:ring-2 focus-visible:ring-mar">+34 960 000 000</a></p>
+          </div>
+          <div class="rounded-2xl bg-white p-6">
+            <p class="font-display text-lg font-semibold">Miami, EE. UU.</p>
+            <p class="text-sm text-grafito">Oficina de expansión</p>
+            <p class="mt-3"><a href="tel:+13050000000" class="font-semibold text-mar underline underline-offset-4 hover:text-tinta focus:outline-none focus-visible:ring-2 focus-visible:ring-mar">+1 305 000 0000</a></p>
+          </div>
+          <p class="sm:col-span-2">
+            <a href="mailto:empresas@nexova.example" class="inline-flex w-full items-center justify-center rounded-xl bg-tinta px-6 py-3.5 text-lg font-bold text-white hover:bg-tinta-700 focus:outline-none focus-visible:ring-2 focus-visible:ring-tinta focus-visible:ring-offset-2">
+              Escribir a empresas@nexova.example
+            </a>
+          </p>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <!-- PIE DE PÁGINA -->
+  <footer class="bg-tinta text-tinta-200">
+    <div class="mx-auto grid max-w-contenido gap-10 px-4 py-12 sm:px-6 md:grid-cols-3">
+      <div>
+        <a href="index.html" class="inline-flex items-center gap-2 rounded-lg focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">
+          <img src="assets/img/logo-nexova.svg" alt="Logotipo de Nexova Solutions" width="36" height="36" class="h-9 w-9 rounded-lg ring-1 ring-tinta-600" loading="lazy">
+          <span class="font-display text-lg font-extrabold text-white">Nexova Solutions</span>
+        </a>
+        <p class="mt-4 max-w-xs leading-relaxed">Consultora de selección de talento, soporte al cliente y formación corporativa desde 2011.</p>
+      </div>
+
+      <nav aria-label="Enlaces del pie de página">
+        <h2 class="font-display text-base font-semibold text-white">Navegación</h2>
+        <ul class="mt-4 space-y-2">
+          <li><a href="#servicios" class="hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">Servicios</a></li>
+          <li><a href="#trayectoria" class="hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">Quiénes somos</a></li>
+          <li><a href="#como-postular" class="hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">Cómo postular</a></li>
+          <li><a href="application.html" class="hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">Formulario de postulación</a></li>
+        </ul>
+      </nav>
+
+      <div>
+        <h2 class="font-display text-base font-semibold text-white">Contacto</h2>
+        <address class="mt-4 space-y-3 not-italic leading-relaxed">
+          <p>Valencia, Comunidad Valenciana, España<br><a href="tel:+34960000000" class="hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">+34 960 000 000</a></p>
+          <p>Miami, Florida, Estados Unidos<br><a href="tel:+13050000000" class="hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">+1 305 000 0000</a></p>
+          <p><a href="mailto:contacto@nexova.example" class="hover:text-white hover:underline focus:outline-none focus-visible:ring-2 focus-visible:ring-azahar">contacto@nexova.example</a></p>
+        </address>
+      </div>
+    </div>
+    <div class="border-t border-tinta-600">
+      <p class="mx-auto max-w-contenido px-4 py-6 text-sm sm:px-6">© 2026 Nexova Solutions. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/menu.js" defer></script>
+</body>
+</html>
