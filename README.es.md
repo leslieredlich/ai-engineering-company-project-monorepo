@@ -16,16 +16,24 @@ _These instructions are also available in [English](./README.md)._
 | [`index.html`](./index.html) | Landing page: servicios, trayectoria, cómo postular y contacto. Incluye Schema.org (`Organization`). |
 | [`application.html`](./application.html) | Formulario de postulación de candidatos (campos de la entidad *Candidato* de `CONTEXT.md`). |
 | [`validation.js`](./validation.js) | Validación completa del formulario con mensajes de error accesibles. |
-| [`assets/`](./assets/) | Logo, íconos SVG, configuración de Tailwind y menú móvil. |
+| [`styles.css`](./styles.css) | CSS **generado** por Tailwind a partir de las clases del HTML (no se edita a mano). |
+| [`tailwind.config.js`](./tailwind.config.js) | Colores y fuentes de la marca para Tailwind. |
+| [`assets/`](./assets/) | Logo, íconos SVG, entrada de Tailwind y menú móvil. |
 
-**Stack:** HTML5 semántico + Tailwind CSS (CDN) + JavaScript sin librerías.
+**Stack:** HTML5 semántico + Tailwind CSS 3 (compilado con su CLI) + JavaScript sin librerías.
+
+> Empezamos con Tailwind CDN, pero en móvil genera el CSS dentro del navegador y dejaba el rendimiento de Lighthouse bajo 80. Por eso las mismas clases utilitarias se compilan a `styles.css` (de 89 a 99 en móvil).
 
 **Ejecutar en local:**
 
 ```bash
-npx serve -l 3000 .
-# o bien
-npm start
+npx serve -l 3000 .        # o: npm start
+```
+
+Si cambias clases de Tailwind en el HTML o el JS, regenera el CSS:
+
+```bash
+npm run build:css          # npx tailwindcss@3.4.16 … --minify
 ```
 
 Abre http://localhost:3000. El formulario todavía no envía datos a un servidor: si todo es válido, muestra un mensaje de éxito y deja en la consola del navegador los datos que se enviarían.

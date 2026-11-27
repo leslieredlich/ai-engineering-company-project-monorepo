@@ -1,0 +1,4 @@
+/* Entrada de Tailwind: solo directivas. `npm run build:css` genera /styles.css. */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

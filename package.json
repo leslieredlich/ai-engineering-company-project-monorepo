@@ -4,6 +4,7 @@
   "private": true,
   "description": "Sitio web público de Nexova Solutions: landing page y formulario de postulación de candidatos.",
   "scripts": {
+    "build:css": "npx --yes tailwindcss@3.4.16 -i ./assets/css/tailwind.input.css -o ./styles.css --minify",
     "start": "npx --yes serve -l 3000 ."
   }
 }

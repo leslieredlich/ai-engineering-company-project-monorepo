@@ -1,5 +1,6 @@
-// Tokens de marca de Nexova para Tailwind CDN (compartidos por todas las páginas).
-tailwind.config = {
+/** Configuración de Tailwind para el sitio de Nexova (tokens de marca). */
+module.exports = {
+  content: ['./index.html', './application.html', './validation.js', './assets/js/**/*.js'],
   theme: {
     extend: {
       colors: {
@@ -20,4 +21,5 @@ tailwind.config = {
       lineHeight: { titular: '1.05' },
     },
   },
+  plugins: [],
 };
